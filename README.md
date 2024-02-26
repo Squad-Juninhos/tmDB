@@ -19,7 +19,7 @@ No nosso login teremos possibilidade de realizá-lo via social medias, você vai
 [Figma 1 Etapa](https://www.figma.com/file/jPXgNyq6UVbhmgB40uuQLD/tmDB?type=design&node-id=0%3A1&mode=design&t=Fv16s9cb2vFSbYJx-1)
 
 
-# OBRIGATORIEDADES (:warning: em construção)
+## OBRIGATORIEDADES :warning: (em construção)
 - Quadro [TRELLO](https://trello.com/invite/b/K0PZVC3b/ATTId44dbb30a0308f32259b1f5ef3cefc5a30C67DEC/squad-juniores), deve ser atualizado sempre que possível, com as estimativas e as informações que você vai precisar passar pro seu PM/ PO/ TM/ TechLead;
 - Aplicação deve rodar o CI/CD;
 - Precisa estar documentado então mantenha um README, com mínimo de informações sobre o que está sendo feito, e screenshoots;
