@@ -35,6 +35,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F38E9862B990CD000D747D5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6F38E9872B990D7000D747D5 /* Splash */,
+				6F38E98B2B990E2A00D747D5 /* Login */,
+				6F38E98C2B990E3700D747D5 /* Password */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		6F38E9872B990D7000D747D5 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		6F38E98A2B990E1800D747D5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6F38E98B2B990E2A00D747D5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		6F38E98C2B990E3700D747D5 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Password;
+			sourceTree = "<group>";
+		};
 		6F77FEDD2B99039E000CCE73 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +92,8 @@
 		6F77FEE82B99039E000CCE73 /* TheMovie */ = {
 			isa = PBXGroup;
 			children = (
+				6F38E98A2B990E1800D747D5 /* Common */,
+				6F38E9862B990CD000D747D5 /* Scenes */,
 				6F77FEE92B99039E000CCE73 /* AppDelegate.swift */,
 				6F77FEEB2B99039E000CCE73 /* SceneDelegate.swift */,
 				6F77FEED2B99039E000CCE73 /* ViewController.swift */,
