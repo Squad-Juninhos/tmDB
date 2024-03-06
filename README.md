@@ -1,5 +1,5 @@
 # Desafio The Movie DB
-Você deverá criar um aplicativos sobre filmes, utilizando a [API](https://developer.themoviedb.org/docs/getting-started) do [TheMovieDB](https://www.themoviedb.org/), a ideia é que esse app a princípio seja básico e depois vamos evoluindo com features personalizadas, busca, favoritos e afins.
+Você deverá criar um aplicativos sobre filmes, utilizando a [API](https://developer.themoviedb.org/docs/getting-started) do [TheMovieDB](https://www.themoviedb.org/), a ideia é que esse app a princípio seja básico e depois vamos evoluindo com features personalizadas, busca, favoritos e afins. 
 
 ## 1 Etapa - CI/CD, Splash, Login e Integração com redes :dart:
 
