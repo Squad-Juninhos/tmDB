@@ -38,39 +38,63 @@
 		6F38E9862B990CD000D747D5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				6F38E9872B990D7000D747D5 /* Splash */,
-				6F38E98B2B990E2A00D747D5 /* Login */,
-				6F38E98C2B990E3700D747D5 /* Password */,
+				6F38E9912B99FDB600D747D5 /* Password */,
+				6F38E9902B99FDAE00D747D5 /* Login */,
+				6F38E98F2B99FDA200D747D5 /* Splash */,
 			);
 			name = Scenes;
-			sourceTree = "<group>";
-		};
-		6F38E9872B990D7000D747D5 /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Splash;
 			sourceTree = "<group>";
 		};
 		6F38E98A2B990E1800D747D5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6F38E9942B99FDDF00D747D5 /* Services */,
+				6F38E9932B99FDCB00D747D5 /* Extensions */,
+				6F38E9922B99FDC100D747D5 /* Constants */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		6F38E98B2B990E2A00D747D5 /* Login */ = {
+		6F38E98F2B99FDA200D747D5 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		6F38E9902B99FDAE00D747D5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Login;
 			sourceTree = "<group>";
 		};
-		6F38E98C2B990E3700D747D5 /* Password */ = {
+		6F38E9912B99FDB600D747D5 /* Password */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Password;
+			sourceTree = "<group>";
+		};
+		6F38E9922B99FDC100D747D5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		6F38E9932B99FDCB00D747D5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6F38E9942B99FDDF00D747D5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		6F77FEDD2B99039E000CCE73 = {
