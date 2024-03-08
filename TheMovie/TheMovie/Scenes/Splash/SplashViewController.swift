@@ -1,10 +1,3 @@
-//
-//  SplashViewController.swift
-//  TheMovie
-//
-//  Created by Jeiel Lima on 07/03/24.
-//
-
 import UIKit
 
 class SplashViewController: UIViewController {
@@ -42,42 +35,42 @@ class SplashViewController: UIViewController {
 }
 
 // MARK: PREVIEW
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-struct UIViewControllerPreview<SplashViewController: UIViewController>: UIViewControllerRepresentable {
-    let viewController: SplashViewController
-
-    init(_ builder: @escaping () -> SplashViewController) {
-        viewController = builder()
-    }
-
-    // MARK: - UIViewControllerRepresentable
-    func makeUIViewController(context: Context) -> SplashViewController {
-        viewController
-    }
-
-    func updateUIViewController(_ uiViewController: SplashViewController, context: UIViewControllerRepresentableContext<UIViewControllerPreview<SplashViewController>>) {
-        return
-    }
-}
-#endif
-
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-
-let deviceNames: [String] = [
-    "iPhone 11 Pro Max",
-]
-
-@available(iOS 13.0, *)
-struct ViewController_Preview: PreviewProvider {
-  static var previews: some View {
-    ForEach(deviceNames, id: \.self) { deviceName in
-      UIViewControllerPreview {
-          SplashViewController()
-      }.previewDevice(PreviewDevice(rawValue: deviceName))
-        .previewDisplayName(deviceName)
-    }
-  }
-}
-#endif
+//#if canImport(SwiftUI) && DEBUG
+//import SwiftUI
+//struct UIViewControllerPreview<SplashViewController: UIViewController>: UIViewControllerRepresentable {
+//    let viewController: SplashViewController
+//
+//    init(_ builder: @escaping () -> SplashViewController) {
+//        viewController = builder()
+//    }
+//
+//    // MARK: - UIViewControllerRepresentable
+//    func makeUIViewController(context: Context) -> SplashViewController {
+//        viewController
+//    }
+//
+//    func updateUIViewController(_ uiViewController: SplashViewController, context: UIViewControllerRepresentableContext<UIViewControllerPreview<SplashViewController>>) {
+//        return
+//    }
+//}
+//#endif
+//
+//#if canImport(SwiftUI) && DEBUG
+//import SwiftUI
+//
+//let deviceNames: [String] = [
+//    "iPhone 11 Pro Max",
+//]
+//
+//@available(iOS 13.0, *)
+//struct ViewController_Preview: PreviewProvider {
+//  static var previews: some View {
+//    ForEach(deviceNames, id: \.self) { deviceName in
+//      UIViewControllerPreview {
+//          SplashViewController()
+//      }.previewDevice(PreviewDevice(rawValue: deviceName))
+//        .previewDisplayName(deviceName)
+//    }
+//  }
+//}
+//#endif
