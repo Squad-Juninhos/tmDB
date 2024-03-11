@@ -3,60 +3,37 @@ import UIKit
 class LoginViewController: UIViewController {
     
     lazy var topLabel: UILabel = {
-        let topLabel = UILabel()
-        topLabel.translatesAutoresizingMaskIntoConstraints = false
-        topLabel.text = "Sign in with social accounts"
-        topLabel.textColor = .white
-        topLabel.font = UIFont.boldSystemFont(ofSize: 23)
-        return topLabel
+        let label = createLabel(text: "Sign in with social accounts")
+        return label
     }()
     
     lazy var googleButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .white
-        button.layer.cornerRadius = 10
+        let button = createSocialButton()
         return button
     }()
     
     lazy var appleButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .white
-        button.layer.cornerRadius = 10
+        let button = createSocialButton()
         return button
     }()
     
     lazy var faceButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .white
-        button.layer.cornerRadius = 10
+        let button = createSocialButton()
         return button
     }()
     
     lazy var lowerLabel: UILabel = {
-        let lowerLabel = UILabel()
-        lowerLabel.translatesAutoresizingMaskIntoConstraints = false
-        lowerLabel.text = "or"
-        lowerLabel.textColor = .white
-        lowerLabel.font = UIFont.boldSystemFont(ofSize: 23)
-        return lowerLabel
+        let label = createLabel(text: "or")
+        return label
     }()
     
     lazy var createButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = ColorConstants.buttonColor
-        button.layer.cornerRadius = 10
+        let button = createActionButton(title: "Create a Free Account")
         return button
     }()
     
     lazy var signButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = ColorConstants.buttonColor
-        button.layer.cornerRadius = 10
+        let button = createActionButton(title: "Sign In")
         return button
     }()
     
@@ -77,33 +54,74 @@ class LoginViewController: UIViewController {
         view.addSubview(appleButton)
         view.addSubview(faceButton)
         view.addSubview(lowerLabel)
-
+        view.addSubview(createButton)
+        view.addSubview(signButton)
     }
     
     private func setupConstraints() {
+        let buttonSize = CGSize(width: 83, height: 83)
+        let buttonSpacing: CGFloat = 30
+        
         NSLayoutConstraint.activate([
             topLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             topLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
             
-            googleButton.widthAnchor.constraint(equalToConstant: 83),
-            googleButton.heightAnchor.constraint(equalToConstant: 83),
+            googleButton.widthAnchor.constraint(equalToConstant: buttonSize.width),
+            googleButton.heightAnchor.constraint(equalToConstant: buttonSize.height),
             googleButton.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 50),
-            googleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+            googleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: buttonSpacing),
             
-            appleButton.widthAnchor.constraint(equalToConstant: 83),
-            appleButton.heightAnchor.constraint(equalToConstant: 83),
+            appleButton.widthAnchor.constraint(equalToConstant: buttonSize.width),
+            appleButton.heightAnchor.constraint(equalToConstant: buttonSize.height),
             appleButton.centerYAnchor.constraint(equalTo: googleButton.centerYAnchor),
             appleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            faceButton.widthAnchor.constraint(equalToConstant: 83),
-            faceButton.heightAnchor.constraint(equalToConstant: 83),
+            faceButton.widthAnchor.constraint(equalToConstant: buttonSize.width),
+            faceButton.heightAnchor.constraint(equalToConstant: buttonSize.height),
             faceButton.centerYAnchor.constraint(equalTo: googleButton.centerYAnchor),
-            faceButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
+            faceButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -buttonSpacing),
             
             lowerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            lowerLabel.topAnchor.constraint(equalTo: googleButton.bottomAnchor, constant: 45),
+            lowerLabel.topAnchor.constraint(equalTo: googleButton.bottomAnchor, constant: 60),
             
+            createButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            createButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            createButton.topAnchor.constraint(equalTo: lowerLabel.bottomAnchor, constant: 45),
+            createButton.heightAnchor.constraint(equalToConstant: 60),
+            
+            signButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            signButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            signButton.topAnchor.constraint(equalTo: createButton.bottomAnchor, constant: 30),
+            signButton.heightAnchor.constraint(equalToConstant: 60),
         ])
+    }
+    
+    private func createLabel(text: String) -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = text
+        label.textColor = .white
+        label.font = .boldSystemFont(ofSize: 23)
+        return label
+    }
+    
+    private func createSocialButton() -> UIButton {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 10
+        return button
+    }
+    
+    private func createActionButton(title: String) -> UIButton {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = ColorConstants.buttonColor
+        button.layer.cornerRadius = 10
+        button.setTitle(title, for: .normal)
+        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        button.setTitleColor(.black, for: .normal)
+        return button
     }
 }
 
