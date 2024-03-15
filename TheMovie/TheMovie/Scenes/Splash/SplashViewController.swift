@@ -1,7 +1,7 @@
 import UIKit
 import Lottie
 
-class SplashViewController: UIViewController {
+final class SplashViewController: UIViewController {
     
     lazy var centerView: UIView = {
         let view = UIView()
