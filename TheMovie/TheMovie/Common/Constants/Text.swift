@@ -16,4 +16,9 @@ struct Text {
             static let createButton = NSLocalizedString("Create a Free Account", comment:"Localizable")
         }
     }
+    struct Image {
+        static let googleLogo = "logo_google"
+        static let appleLogo = "logo_apple"
+        static let facebookLogo = "logo_facebook"
+    }
 }

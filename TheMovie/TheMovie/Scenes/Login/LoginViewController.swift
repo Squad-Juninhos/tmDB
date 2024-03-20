@@ -9,19 +9,19 @@ class LoginViewController: UIViewController {
     
     lazy var googleButton: UIButton = {
         let button = SocialButton.create()
-        button.setImage(UIImage(named: "logo_google"), for: .normal)
+        button.setImage(UIImage(named: Text.Image.googleLogo), for: .normal)
         return button
     }()
     
     lazy var appleButton: UIButton = {
         let button = SocialButton.create()
-        button.setImage(UIImage(named: "logo_apple"), for: .normal)
+        button.setImage(UIImage(named: Text.Image.appleLogo), for: .normal)
         return button
     }()
     
     lazy var faceButton: UIButton = {
         let button = SocialButton.create()
-        button.setImage(UIImage(named: "logo_facebook"), for: .normal)
+        button.setImage(UIImage(named: Text.Image.facebookLogo), for: .normal)
         return button
     }()
     
