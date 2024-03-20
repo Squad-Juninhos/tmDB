@@ -10,10 +10,10 @@ import Foundation
 struct Text {
     struct Auth {
         struct Login {
-            static let socialSignIn = "Sign in with social accounts"
-            static let or           = "or"
-            static let btnSignIn    = "Sign In"
-            static let createButton = "Create a Free Account"
+            static let socialSignIn = NSLocalizedString("Sign in with social accounts", comment:"Localizable")
+            static let or           = NSLocalizedString("or", comment:"Localizable")
+            static let btnSignIn    = NSLocalizedString("Sign In", comment:"Localizable")
+            static let createButton = NSLocalizedString("Create a Free Account", comment:"Localizable")
         }
     }
 }

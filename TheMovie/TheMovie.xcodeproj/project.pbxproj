@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F22BF142BA9E14A00EB881E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F22BF122BA9E14A00EB881E /* Localizable.strings */; };
 		6F38E99B2B9A0A4100D747D5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38E99A2B9A0A4100D747D5 /* SplashViewController.swift */; };
 		6F38E9A02B9A6A7800D747D5 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38E99F2B9A6A7800D747D5 /* ColorConstants.swift */; };
 		6F77FEEA2B99039E000CCE73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F77FEE92B99039E000CCE73 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F22BF152BA9E16C00EB881E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6F38E99A2B9A0A4100D747D5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		6F38E99F2B9A6A7800D747D5 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		6F77FEE62B99039E000CCE73 /* TheMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 			children = (
 				6F38E99F2B9A6A7800D747D5 /* ColorConstants.swift */,
 				6FDF17322BA4E3EE00F08F2D /* Text.swift */,
+				6F22BF122BA9E14A00EB881E /* Localizable.strings */,
 				6FDF17342BA4EAF200F08F2D /* ButtonFactories.swift */,
 			);
 			path = Constants;
@@ -233,6 +236,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 6F77FEDD2B99039E000CCE73;
 			productRefGroup = 6F77FEE72B99039E000CCE73 /* Products */;
@@ -250,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F77FEF32B9903A2000CCE73 /* Assets.xcassets in Resources */,
+				6F22BF142BA9E14A00EB881E /* Localizable.strings in Resources */,
 				6FDF17312BA4E15800F08F2D /* logo_google.png in Resources */,
 				6FC00A622BA20E390089FE68 /* tela.json in Resources */,
 				6FDF172F2BA4E15800F08F2D /* logo_facebook.png in Resources */,
@@ -318,11 +323,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		6F22BF122BA9E14A00EB881E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F22BF152BA9E16C00EB881E /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		6F77FEF82B9903A2000CCE73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -384,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
