@@ -1,32 +1,11 @@
-platform :ios do  
-  desc "Archives the app"
-  lane :build_adhoc do    
-    cocoapods(try_repo_update_on_error: true)
-    scan(      
-      workspace: "./TheMovie.xcworkspace",
-      scheme: "TheMovie",
-      configuration: "Debug",
-      devices: ["iPhone 11"],
-      clean: true,
-    )
-    update_build_number
-    match(type: "adhoc", readonly: true)
-    gym(
-      include_bitcode: false,
-      clean: true,
-      workspace: "./TheMovie.xcworkspace",
-      scheme: "TheMovie",
-      output_name: "TheMovie.ipa",
-      export_method: "ad-hoc"
-    )
-  end
-  
-  desc "Set build number based on current time"
-  private_lane :update_build_number do
-    build_number = Time.new.strftime("%Y.%m.%d.%H%M")
-    increment_build_number(
-      build_number: build_number,
-      xcodeproj: "./TheMovie.xcodeproj"
-    )
+default_platform(:ios)
+
+platform :ios do
+  desc "TheMovie"
+  lane :test do
+    cocoapods
+    run_tests(workspace: "TheMovie.xcworkspace",
+              devices: ["iPhone 11"],
+              scheme: "TheMovie")
   end
 end
