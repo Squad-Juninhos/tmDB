@@ -24,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19C641F12BABD9E300180158 /* tela.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = tela.json; path = ../../../../../../Downloads/tela.json; sourceTree = "<group>"; };
 		6F22BF152BA9E16C00EB881E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6F38E99A2B9A0A4100D747D5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		6F38E99F2B9A6A7800D747D5 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
@@ -56,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19C641F02BABD9DF00180158 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19C641F12BABD9E300180158 /* tela.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6F38E98A2B990E1800D747D5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +103,7 @@
 		6F38E9962B9A09E500D747D5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				19C641F02BABD9DF00180158 /* Resources */,
 				6F38E9992B9A0A2000D747D5 /* Splash */,
 				6F38E9982B9A0A1700D747D5 /* Login */,
 				6F38E9972B9A0A1000D747D5 /* Password */,
