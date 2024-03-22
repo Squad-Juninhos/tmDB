@@ -2,7 +2,24 @@
   "images" : [
     {
       "filename" : "logo_apple.png",
+<<<<<<< HEAD
       "idiom" : "universal"
+=======
+<<<<<<< HEAD
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+=======
+      "idiom" : "universal"
+>>>>>>> 5b0b4c0 (fix: ajustando bug arquivo)
+>>>>>>> 528cf3b (up files for test)
     }
   ],
   "info" : {
