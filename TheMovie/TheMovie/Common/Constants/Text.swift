@@ -17,8 +17,8 @@ struct Text {
         }
     }
     struct Image {
-        static let googleLogo = "logo_google"
-        static let appleLogo = "logo_apple"
-        static let facebookLogo = "logo_facebook"
+        static let googleLogo = "google_logo"
+        static let appleLogo = "apple_logo"
+        static let facebookLogo = "facebook_logo"
     }
 }

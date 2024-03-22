@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "apple_logo.png",
       "idiom" : "universal"
     }
   ],

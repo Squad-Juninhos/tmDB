@@ -14,13 +14,10 @@
 		6F77FEEA2B99039E000CCE73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F77FEE92B99039E000CCE73 /* AppDelegate.swift */; };
 		6F77FEEC2B99039E000CCE73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F77FEEB2B99039E000CCE73 /* SceneDelegate.swift */; };
 		6F77FEEE2B99039E000CCE73 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F77FEED2B99039E000CCE73 /* LoginViewController.swift */; };
-		6F77FEF32B9903A2000CCE73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F77FEF22B9903A2000CCE73 /* Assets.xcassets */; };
-		6FC00A622BA20E390089FE68 /* tela.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FC00A612BA20E390089FE68 /* tela.json */; };
-		6FDF172F2BA4E15800F08F2D /* logo_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF172C2BA4E15800F08F2D /* logo_facebook.png */; };
-		6FDF17302BA4E15800F08F2D /* logo_apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF172D2BA4E15800F08F2D /* logo_apple.png */; };
-		6FDF17312BA4E15800F08F2D /* logo_google.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF172E2BA4E15800F08F2D /* logo_google.png */; };
 		6FDF17332BA4E3EE00F08F2D /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF17322BA4E3EE00F08F2D /* Text.swift */; };
 		6FDF17352BA4EAF200F08F2D /* ButtonFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF17342BA4EAF200F08F2D /* ButtonFactories.swift */; };
+		6FED8CB62BAE160F0082CF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FED8CB52BAE160F0082CF94 /* Assets.xcassets */; };
+		6FED8CB82BAE19D00082CF94 /* tela.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FED8CB42BAE15B00082CF94 /* tela.json */; };
 		95A1CF881352A733C6EE3A30 /* Pods_TheMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE17C8966A1BCFEA9F742D2 /* Pods_TheMovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,14 +42,11 @@
 		6F77FEE92B99039E000CCE73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F77FEEB2B99039E000CCE73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6F77FEED2B99039E000CCE73 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		6F77FEF22B9903A2000CCE73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F77FEF72B9903A2000CCE73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FC00A612BA20E390089FE68 /* tela.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tela.json; path = ../../../../../Downloads/tela.json; sourceTree = "<group>"; };
-		6FDF172C2BA4E15800F08F2D /* logo_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_facebook.png; path = ../../../../../Downloads/logo_facebook.png; sourceTree = "<group>"; };
-		6FDF172D2BA4E15800F08F2D /* logo_apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_apple.png; path = ../../../../../Downloads/logo_apple.png; sourceTree = "<group>"; };
-		6FDF172E2BA4E15800F08F2D /* logo_google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_google.png; path = ../../../../../Downloads/logo_google.png; sourceTree = "<group>"; };
 		6FDF17322BA4E3EE00F08F2D /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		6FDF17342BA4EAF200F08F2D /* ButtonFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFactories.swift; sourceTree = "<group>"; };
+		6FED8CB42BAE15B00082CF94 /* tela.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tela.json; sourceTree = "<group>"; };
+		6FED8CB52BAE160F0082CF94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFE17C8966A1BCFEA9F742D2 /* Pods_TheMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28F14C955106C598AE23911 /* Pods-TheMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovie.release.xcconfig"; path = "Target Support Files/Pods-TheMovie/Pods-TheMovie.release.xcconfig"; sourceTree = "<group>"; };
 		E3CEBB9973D71ADFB7A8B2E9 /* Pods-TheMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovie.debug.xcconfig"; path = "Target Support Files/Pods-TheMovie/Pods-TheMovie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,24 +179,13 @@
 		6F77FEE82B99039E000CCE73 /* TheMovie */ = {
 			isa = PBXGroup;
 			children = (
+				6FED8CB52BAE160F0082CF94 /* Assets.xcassets */,
+				6FED8CB72BAE17870082CF94 /* Resources */,
 				6F38E9962B9A09E500D747D5 /* Scenes */,
 				6F38E98A2B990E1800D747D5 /* Common */,
-				6FC00A602BA20E010089FE68 /* Assets */,
 				6FE972762B9B5D3400FE73E1 /* Supporting Files */,
 			);
 			path = TheMovie;
-			sourceTree = "<group>";
-		};
-		6FC00A602BA20E010089FE68 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				6FDF172D2BA4E15800F08F2D /* logo_apple.png */,
-				6FDF172C2BA4E15800F08F2D /* logo_facebook.png */,
-				6FDF172E2BA4E15800F08F2D /* logo_google.png */,
-				6FC00A612BA20E390089FE68 /* tela.json */,
-				6F77FEF22B9903A2000CCE73 /* Assets.xcassets */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		6FE972762B9B5D3400FE73E1 /* Supporting Files */ = {
@@ -213,6 +196,14 @@
 				6F77FEF72B9903A2000CCE73 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6FED8CB72BAE17870082CF94 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6FED8CB42BAE15B00082CF94 /* tela.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		812D5014E8108C2CE78DFEA9 /* Frameworks */ = {
@@ -323,12 +314,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F77FEF32B9903A2000CCE73 /* Assets.xcassets in Resources */,
+				6FED8CB62BAE160F0082CF94 /* Assets.xcassets in Resources */,
 				6F22BF142BA9E14A00EB881E /* Localizable.strings in Resources */,
-				6FDF17312BA4E15800F08F2D /* logo_google.png in Resources */,
-				6FC00A622BA20E390089FE68 /* tela.json in Resources */,
-				6FDF172F2BA4E15800F08F2D /* logo_facebook.png in Resources */,
-				6FDF17302BA4E15800F08F2D /* logo_apple.png in Resources */,
+				6FED8CB82BAE19D00082CF94 /* tela.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
