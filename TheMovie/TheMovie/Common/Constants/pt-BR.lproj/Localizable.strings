@@ -16,3 +16,6 @@
 "name" = "nome";
 "email" = "e-mail";
 "password" = "senha";
+"confirm password" = "confirmar senha";
+"Create" = "Criar";
+"Login" = "Logar";

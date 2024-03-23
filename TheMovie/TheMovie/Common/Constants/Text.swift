@@ -29,6 +29,12 @@ struct Text {
                 "email", comment:"Localizable")
             static let password = NSLocalizedString(
                 "password", comment:"Localizable")
+            static let confirm = NSLocalizedString(
+                "confirm password", comment:"Localizable")
+            static let create = NSLocalizedString(
+                "Create", comment:"Localizable")
+            static let login = NSLocalizedString(
+                "Login", comment:"Localizable")
         }
     }
     
