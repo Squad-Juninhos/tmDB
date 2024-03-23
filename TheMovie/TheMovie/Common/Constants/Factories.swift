@@ -1,5 +1,5 @@
 //
-//  ButtonFactories.swift
+//  Factories.swift
 //  TheMovie
 //
 //  Created by Jeiel Lima on 15/03/24.
@@ -36,4 +36,25 @@ class ActionButton {
 struct ButtonLayoutConstants {
     static let buttonSize = CGSize(width: 83, height: 83)
     static let buttonSpacing: CGFloat = 30
+}
+
+class TextLabel {
+    static func createLabel(text: String) -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = text
+        label.textColor = .white
+        label.font = .boldSystemFont(ofSize: 23)
+        return label
+    }
+}
+
+class TextField {
+    static func createTf (placeholder: String) -> UITextField {
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = placeholder
+        textField.font = .boldSystemFont(ofSize: 15)
+        return textField
+    }
 }

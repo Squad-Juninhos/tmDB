@@ -1,9 +1,9 @@
 import UIKit
 
-class LoginViewController: UIViewController {
+class MainViewController: UIViewController {
     
     lazy var topLabel: UILabel = {
-        let label = createLabel(text: Text.Auth.Login.socialSignIn)
+        let label = TextLabel.createLabel(text: Text.Auth.Login.socialSignIn)
         return label
     }()
     
@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     }()
     
     lazy var lowerLabel: UILabel = {
-        let label = createLabel(text: Text.Auth.Login.or)
+        let label = TextLabel.createLabel(text: Text.Auth.Login.or)
         return label
     }()
     
@@ -94,14 +94,5 @@ class LoginViewController: UIViewController {
             signButton.topAnchor.constraint(equalTo: createButton.bottomAnchor, constant: 30),
             signButton.heightAnchor.constraint(equalToConstant: 60),
         ])
-    }
-    
-    private func createLabel(text: String) -> UILabel {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = text
-        label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 23)
-        return label
     }
 }
