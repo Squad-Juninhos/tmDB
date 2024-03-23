@@ -28,3 +28,5 @@ No nosso login teremos possibilidade de realizá-lo via social medias, você vai
 - Arquitetura MVVM;
 - Gitflow (feat -> develop -> main) - não abra PR para a main!
 - Conventional commits
+
+#testing
