@@ -26,11 +26,13 @@ class CreateViewController: UIViewController {
     
     lazy var passTextField: UITextField = {
         let textField = TextField.createTf(placeholder: Text.Auth.Create.password)
+        textField.isSecureTextEntry = true
         return textField
     }()
     
     lazy var confirmPassTextField: UITextField = {
         let textField = TextField.createTf(placeholder: Text.Auth.Create.confirm)
+        textField.isSecureTextEntry = true
         return textField
     }()
     
@@ -107,3 +109,43 @@ class CreateViewController: UIViewController {
         ])
     }
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+struct UIViewControllerPreview<CreateViewController: UIViewController>: UIViewControllerRepresentable {
+    let viewController: CreateViewController
+
+    init(_ builder: @escaping () -> CreateViewController) {
+        viewController = builder()
+    }
+
+    // MARK: - UIViewControllerRepresentable
+    func makeUIViewController(context: Context) -> CreateViewController {
+        viewController
+    }
+
+    func updateUIViewController(_ uiViewController: CreateViewController, context: UIViewControllerRepresentableContext<UIViewControllerPreview<CreateViewController>>) {
+        return
+    }
+}
+#endif
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+let deviceNames: [String] = [
+    "iPhone 11 Pro Max",
+]
+
+@available(iOS 15.0, *)
+struct ViewController_Preview: PreviewProvider {
+  static var previews: some View {
+    ForEach(deviceNames, id: \.self) { deviceName in
+      UIViewControllerPreview {
+        CreateViewController()
+      }.previewDevice(PreviewDevice(rawValue: deviceName))
+        .previewDisplayName(deviceName)
+    }
+  }
+}
+#endif

@@ -1,13 +1,7 @@
-//
-//  Factories.swift
-//  TheMovie
-//
-//  Created by Jeiel Lima on 15/03/24.
-//
-
 import Foundation
 import UIKit
 
+//MARK: - Buttons
 class SocialButton {
     static func create() -> UIButton {
         let button = UIButton()
@@ -33,6 +27,7 @@ class ActionButton {
     }
 }
 
+//MARK: - Labels
 class TextLabel {
     static func createLabel(text: String) -> UILabel {
         let label = UILabel()
@@ -44,20 +39,35 @@ class TextLabel {
     }
 }
 
+//MARK: - TextField
 class TextField {
     static func createTf (placeholder: String) -> UITextField {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = placeholder
         textField.font = .boldSystemFont(ofSize: 17)
-        textField.borderStyle = .line
-        textField.tintColor = .white
-            let attributes = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        textField.textColor = .white
+        textField.borderStyle = .none
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.lightText]
         textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes)
+        
+        let bottomLine = UIView()
+        bottomLine.translatesAutoresizingMaskIntoConstraints = false
+        bottomLine.backgroundColor = .lightText
+        bottomLine.layer.cornerRadius = 0.5
+        textField.addSubview(bottomLine)
+        
+        NSLayoutConstraint.activate([
+            bottomLine.leadingAnchor.constraint(equalTo: textField.leadingAnchor),
+            bottomLine.trailingAnchor.constraint(equalTo: textField.trailingAnchor),
+            bottomLine.bottomAnchor.constraint(equalTo: textField.bottomAnchor),
+            bottomLine.heightAnchor.constraint(equalToConstant: 1.5)
+        ])
         return textField
     }
 }
 
+//MARK: - Magic Numbers
 struct ButtonLayoutConstants {
     static let logoButtonSize = CGSize(width: 83, height: 83)
     static let buttonSpacing: CGFloat = 30
