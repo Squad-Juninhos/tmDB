@@ -66,33 +66,33 @@ class MainViewController: UIViewController {
             topLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             topLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
             
-            googleButton.widthAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonSize.width),
-            googleButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonSize.height),
+            googleButton.widthAnchor.constraint(equalToConstant: ButtonLayoutConstants.logoButtonSize.width),
+            googleButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.logoButtonSize.height),
             googleButton.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 50),
             googleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: ButtonLayoutConstants.buttonSpacing),
             
-            appleButton.widthAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonSize.width),
-            appleButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonSize.height),
+            appleButton.widthAnchor.constraint(equalToConstant: ButtonLayoutConstants.logoButtonSize.width),
+            appleButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.logoButtonSize.height),
             appleButton.centerYAnchor.constraint(equalTo: googleButton.centerYAnchor),
             appleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            faceButton.widthAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonSize.width),
-            faceButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonSize.height),
+            faceButton.widthAnchor.constraint(equalToConstant: ButtonLayoutConstants.logoButtonSize.width),
+            faceButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.logoButtonSize.height),
             faceButton.centerYAnchor.constraint(equalTo: googleButton.centerYAnchor),
             faceButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -ButtonLayoutConstants.buttonSpacing),
             
             lowerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             lowerLabel.topAnchor.constraint(equalTo: googleButton.bottomAnchor, constant: 60),
             
-            createButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            createButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            createButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutMarginsConstants.leadingMargin),
+            createButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutMarginsConstants.trailingMargin),
             createButton.topAnchor.constraint(equalTo: lowerLabel.bottomAnchor, constant: 60),
-            createButton.heightAnchor.constraint(equalToConstant: 60),
+            createButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonHeight),
             
-            signButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            signButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            signButton.topAnchor.constraint(equalTo: createButton.bottomAnchor, constant: 30),
-            signButton.heightAnchor.constraint(equalToConstant: 60),
+            signButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutMarginsConstants.leadingMargin),
+            signButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutMarginsConstants.trailingMargin),
+            signButton.topAnchor.constraint(equalTo: createButton.bottomAnchor, constant: ButtonLayoutConstants.buttonSpacing),
+            signButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonHeight),
         ])
     }
 }
