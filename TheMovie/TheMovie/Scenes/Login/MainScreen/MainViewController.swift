@@ -31,12 +31,12 @@ class MainViewController: UIViewController {
     }()
     
     lazy var createButton: UIButton = {
-        let button = ActionButton.create(title: Text.Auth.Login.createButton)
+        let button = ActionButton.create(title: Text.Auth.Login.createButton, action: #selector(goToCreateView), target: self)
         return button
     }()
     
     lazy var signButton: UIButton = {
-        let button = ActionButton.create(title: Text.Auth.Login.btnSignIn)
+        let button = ActionButton.create(title: Text.Auth.Login.btnSignIn, action: #selector(goToNextView), target: self)
         return button
     }()
     
@@ -94,5 +94,16 @@ class MainViewController: UIViewController {
             signButton.topAnchor.constraint(equalTo: createButton.bottomAnchor, constant: ButtonLayoutConstants.buttonSpacing),
             signButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonHeight),
         ])
+    }
+    
+    @objc func goToCreateView() {
+        let vc = CreateViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
+    @objc func goToNextView() {
+        
     }
 }

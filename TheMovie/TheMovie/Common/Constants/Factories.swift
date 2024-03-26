@@ -15,7 +15,7 @@ class SocialButton {
 }
 
 class ActionButton {
-    static func create(title: String) -> UIButton {
+    static func create(title: String, action: Selector, target: Any?) -> UIButton {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = ColorConstants.buttonColor
@@ -23,6 +23,7 @@ class ActionButton {
         button.setTitle(title, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 20)
         button.setTitleColor(.black, for: .normal)
+        button.addTarget(target, action: action, for: .touchUpInside)
         return button
     }
 }
@@ -41,13 +42,17 @@ class TextLabel {
 
 //MARK: - TextField
 class TextField {
-    static func createTf (placeholder: String) -> UITextField {
+    static func createTf (placeholder: String, isSecure: Bool = false, keyboardType: UIKeyboardType = .default) -> UITextField {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = placeholder
-        textField.font = .boldSystemFont(ofSize: 17)
+        textField.font = .boldSystemFont(ofSize: 18)
         textField.textColor = .white
         textField.borderStyle = .none
+        textField.isSecureTextEntry = isSecure
+        textField.autocapitalizationType = .none
+        textField.keyboardType = keyboardType
+        textField.keyboardAppearance = .default
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.lightText]
         textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes)
         

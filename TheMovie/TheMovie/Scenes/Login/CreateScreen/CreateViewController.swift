@@ -20,29 +20,28 @@ class CreateViewController: UIViewController {
     }()
     
     lazy var emailTextField: UITextField = {
-        let textField = TextField.createTf(placeholder: Text.Auth.Create.email)
+        let textField = TextField.createTf(placeholder: Text.Auth.Create.email, keyboardType: .emailAddress)
         return textField
     }()
     
     lazy var passTextField: UITextField = {
-        let textField = TextField.createTf(placeholder: Text.Auth.Create.password)
-        textField.isSecureTextEntry = true
+        let textField = TextField.createTf(placeholder: Text.Auth.Create.password, isSecure: true)
         return textField
     }()
     
     lazy var confirmPassTextField: UITextField = {
-        let textField = TextField.createTf(placeholder: Text.Auth.Create.confirm)
+        let textField = TextField.createTf(placeholder: Text.Auth.Create.confirm, isSecure: true)
         textField.isSecureTextEntry = true
         return textField
     }()
     
     lazy var buttonCreate: UIButton = {
-        let button = ActionButton.create(title: Text.Auth.Create.create)
+        let button = ActionButton.create(title: Text.Auth.Create.create, action: #selector(alertCreateAccount), target: self)
         return button
     }()
     
     lazy var buttonLogin: UIButton = {
-        let button = ActionButton.create(title: Text.Auth.Create.login)
+        let button = ActionButton.create(title: Text.Auth.Create.login, action: #selector(goToLoginScreen), target: self)
         button.backgroundColor = .clear
         button.setTitleColor(.white, for: .normal)
         return button
@@ -108,4 +107,53 @@ class CreateViewController: UIViewController {
             
         ])
     }
+    
+    @objc func goToLoginScreen() {
+
+    }
+    
+    @objc func alertCreateAccount() {
+        
+    }
 }
+
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+struct UIViewControllerPreview<CreateViewController: UIViewController>: UIViewControllerRepresentable {
+    let viewController: CreateViewController
+
+    init(_ builder: @escaping () -> CreateViewController) {
+        viewController = builder()
+    }
+
+    // MARK: - UIViewControllerRepresentable
+    func makeUIViewController(context: Context) -> CreateViewController {
+        viewController
+    }
+
+    func updateUIViewController(_ uiViewController: CreateViewController, context: UIViewControllerRepresentableContext<UIViewControllerPreview<CreateViewController>>) {
+        return
+    }
+}
+#endif
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+let deviceNames: [String] = [
+    "iPhone 11 Pro Max",
+]
+
+@available(iOS 15.0, *)
+struct ViewController_Preview: PreviewProvider {
+  static var previews: some View {
+    ForEach(deviceNames, id: \.self) { deviceName in
+      UIViewControllerPreview {
+        CreateViewController()
+      }.previewDevice(PreviewDevice(rawValue: deviceName))
+        .previewDisplayName(deviceName)
+    }
+  }
+}
+#endif
