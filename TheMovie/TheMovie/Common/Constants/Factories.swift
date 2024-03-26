@@ -7,9 +7,9 @@ class SocialButton {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .white
-        button.layer.cornerRadius = 10
+        button.layer.cornerRadius = LayoutConstants.buttonCorner
         button.imageView?.contentMode = .scaleAspectFit
-        button.imageView?.layer.cornerRadius = 10
+        button.imageView?.layer.cornerRadius = LayoutConstants.buttonCorner
         return button
     }
 }
@@ -19,9 +19,9 @@ class ActionButton {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = ColorConstants.buttonColor
-        button.layer.cornerRadius = 10
+        button.layer.cornerRadius = LayoutConstants.buttonCorner
         button.setTitle(title, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        button.titleLabel?.font = .boldSystemFont(ofSize: LayoutConstants.labelSize)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(target, action: action, for: .touchUpInside)
         return button
@@ -35,7 +35,7 @@ class TextLabel {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = text
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 23)
+        label.font = .boldSystemFont(ofSize: LayoutConstants.labelSize)
         return label
     }
 }
@@ -46,43 +46,47 @@ class TextField {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = placeholder
-        textField.font = .boldSystemFont(ofSize: 18)
+        textField.font = .boldSystemFont(ofSize: LayoutConstants.textFieldSize)
         textField.textColor = .white
         textField.borderStyle = .none
         textField.isSecureTextEntry = isSecure
         textField.autocapitalizationType = .none
         textField.keyboardType = keyboardType
-        textField.keyboardAppearance = .default
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.lightText]
         textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes)
         
         let bottomLine = UIView()
         bottomLine.translatesAutoresizingMaskIntoConstraints = false
         bottomLine.backgroundColor = .lightText
-        bottomLine.layer.cornerRadius = 0.5
         textField.addSubview(bottomLine)
         
         NSLayoutConstraint.activate([
             bottomLine.leadingAnchor.constraint(equalTo: textField.leadingAnchor),
             bottomLine.trailingAnchor.constraint(equalTo: textField.trailingAnchor),
             bottomLine.bottomAnchor.constraint(equalTo: textField.bottomAnchor),
-            bottomLine.heightAnchor.constraint(equalToConstant: 1.5)
+            bottomLine.heightAnchor.constraint(equalToConstant: LayoutConstants.textFieldBottomSize)
         ])
+        textField.becomeFirstResponder()
         return textField
     }
 }
 
 //MARK: - Magic Numbers
-struct ButtonLayoutConstants {
+enum ButtonLayoutConstants {
     static let logoButtonSize = CGSize(width: 83, height: 83)
     static let buttonSpacing: CGFloat = 30
     static let buttonHeight: CGFloat = 60
     static let clearButtonHeight: CGFloat = 40
 }
 
-struct LayoutMarginsConstants {
+enum LayoutConstants {
     static let topLabelSpacing: CGFloat = 80
     static let textFieldSpacing: CGFloat = 40
     static let trailingMargin: CGFloat = -20
     static let leadingMargin: CGFloat = 20
+    static let buttonCorner: CGFloat = 10
+    static let labelSize: CGFloat = 23
+    static let textFieldSize: CGFloat = 18
+    static let textFieldBottomSize: CGFloat = 1.5
+    
 }

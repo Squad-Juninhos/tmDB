@@ -71,39 +71,39 @@ class CreateViewController: UIViewController {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             topLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            topLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: LayoutMarginsConstants.topLabelSpacing),
+            topLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: LayoutConstants.topLabelSpacing),
             
             nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nameTextField.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: LayoutMarginsConstants.topLabelSpacing),
-            nameTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutMarginsConstants.leadingMargin),
-            nameTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutMarginsConstants.trailingMargin),
+            nameTextField.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: LayoutConstants.topLabelSpacing),
+            nameTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.leadingMargin),
+            nameTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutConstants.trailingMargin),
             
             emailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: LayoutMarginsConstants.textFieldSpacing),
-            emailTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutMarginsConstants.leadingMargin),
-            emailTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutMarginsConstants.trailingMargin),
+            emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: LayoutConstants.textFieldSpacing),
+            emailTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.leadingMargin),
+            emailTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutConstants.trailingMargin),
             
             passTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            passTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: LayoutMarginsConstants.textFieldSpacing),
-            passTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutMarginsConstants.leadingMargin),
-            passTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutMarginsConstants.trailingMargin),
+            passTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: LayoutConstants.textFieldSpacing),
+            passTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.leadingMargin),
+            passTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutConstants.trailingMargin),
             
             confirmPassTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            confirmPassTextField.topAnchor.constraint(equalTo: passTextField.bottomAnchor, constant: LayoutMarginsConstants.textFieldSpacing),
-            confirmPassTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutMarginsConstants.leadingMargin),
-            confirmPassTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutMarginsConstants.trailingMargin),
+            confirmPassTextField.topAnchor.constraint(equalTo: passTextField.bottomAnchor, constant: LayoutConstants.textFieldSpacing),
+            confirmPassTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.leadingMargin),
+            confirmPassTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutConstants.trailingMargin),
             
             buttonCreate.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            buttonCreate.topAnchor.constraint(equalTo: confirmPassTextField.bottomAnchor, constant: LayoutMarginsConstants.topLabelSpacing),
+            buttonCreate.topAnchor.constraint(equalTo: confirmPassTextField.bottomAnchor, constant: LayoutConstants.topLabelSpacing),
             buttonCreate.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonHeight),
-            buttonCreate.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutMarginsConstants.leadingMargin),
-            buttonCreate.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutMarginsConstants.trailingMargin),
+            buttonCreate.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.leadingMargin),
+            buttonCreate.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutConstants.trailingMargin),
             
             buttonLogin.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             buttonLogin.topAnchor.constraint(equalTo: buttonCreate.bottomAnchor, constant: ButtonLayoutConstants.buttonSpacing),
             buttonLogin.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.clearButtonHeight),
-            buttonLogin.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutMarginsConstants.leadingMargin),
-            buttonLogin.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutMarginsConstants.trailingMargin),
+            buttonLogin.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.leadingMargin),
+            buttonLogin.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutConstants.trailingMargin),
             
         ])
     }

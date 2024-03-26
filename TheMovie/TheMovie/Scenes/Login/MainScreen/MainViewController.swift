@@ -84,13 +84,13 @@ class MainViewController: UIViewController {
             lowerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             lowerLabel.topAnchor.constraint(equalTo: googleButton.bottomAnchor, constant: 60),
             
-            createButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutMarginsConstants.leadingMargin),
-            createButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutMarginsConstants.trailingMargin),
+            createButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.leadingMargin),
+            createButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutConstants.trailingMargin),
             createButton.topAnchor.constraint(equalTo: lowerLabel.bottomAnchor, constant: 60),
             createButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonHeight),
             
-            signButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutMarginsConstants.leadingMargin),
-            signButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutMarginsConstants.trailingMargin),
+            signButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.leadingMargin),
+            signButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: LayoutConstants.trailingMargin),
             signButton.topAnchor.constraint(equalTo: createButton.bottomAnchor, constant: ButtonLayoutConstants.buttonSpacing),
             signButton.heightAnchor.constraint(equalToConstant: ButtonLayoutConstants.buttonHeight),
         ])
