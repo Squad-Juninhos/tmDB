@@ -19,3 +19,8 @@
 "confirm password" = "confirmar senha";
 "Create" = "Criar";
 "Login" = "Logar";
+
+    // Alert
+"Sucess!" = "Successo!";
+"User registered successfully" = "Usuário cadastrado com sucesso";
+"Close" = "Fechar";

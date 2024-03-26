@@ -36,13 +36,15 @@ class MainViewController: UIViewController {
     }()
     
     lazy var signButton: UIButton = {
-        let button = ActionButton.create(title: Text.Auth.Login.btnSignIn, action: #selector(goToNextView), target: self)
+        let button = ActionButton.create(title: Text.Auth.Login.btnSignIn, action: #selector(goToLoginScreen), target: self)
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ColorConstants.backColor
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = .white
         setupView()
     }
     
@@ -99,11 +101,10 @@ class MainViewController: UIViewController {
     @objc func goToCreateView() {
         let vc = CreateViewController()
         navigationController?.pushViewController(vc, animated: true)
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationController?.navigationBar.tintColor = .white
     }
     
-    @objc func goToNextView() {
-        
+    @objc func goToLoginScreen() {
+        let vc = LoginViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

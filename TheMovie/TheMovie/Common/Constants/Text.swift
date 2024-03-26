@@ -35,6 +35,12 @@ struct Text {
                 "Create", comment:"Localizable")
             static let login = NSLocalizedString(
                 "Login", comment:"Localizable")
+            static let alertTitle = NSLocalizedString(
+                "Sucess!", comment:"Localizable")
+            static let message = NSLocalizedString(
+                "User registered successfully", comment:"Localizable")
+            static let close = NSLocalizedString(
+                "Close", comment:"Localizable")
         }
     }
     

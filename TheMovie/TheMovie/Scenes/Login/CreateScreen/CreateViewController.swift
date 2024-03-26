@@ -9,38 +9,38 @@ import UIKit
 
 class CreateViewController: UIViewController {
     
-    lazy var topLabel: UILabel = {
+    private lazy var topLabel: UILabel = {
         let label = TextLabel.createLabel(text: Text.Auth.Create.createAccount)
         return label
     }()
     
-    lazy var nameTextField: UITextField = {
+    private lazy var nameTextField: UITextField = {
         let textField = TextField.createTf(placeholder: Text.Auth.Create.name)
         return textField
     }()
     
-    lazy var emailTextField: UITextField = {
+    private lazy var emailTextField: UITextField = {
         let textField = TextField.createTf(placeholder: Text.Auth.Create.email, keyboardType: .emailAddress)
         return textField
     }()
     
-    lazy var passTextField: UITextField = {
+    private lazy var passTextField: UITextField = {
         let textField = TextField.createTf(placeholder: Text.Auth.Create.password, isSecure: true)
         return textField
     }()
     
-    lazy var confirmPassTextField: UITextField = {
+    private lazy var confirmPassTextField: UITextField = {
         let textField = TextField.createTf(placeholder: Text.Auth.Create.confirm, isSecure: true)
         textField.isSecureTextEntry = true
         return textField
     }()
     
-    lazy var buttonCreate: UIButton = {
+    private lazy var buttonCreate: UIButton = {
         let button = ActionButton.create(title: Text.Auth.Create.create, action: #selector(alertCreateAccount), target: self)
         return button
     }()
     
-    lazy var buttonLogin: UIButton = {
+    private lazy var buttonLogin: UIButton = {
         let button = ActionButton.create(title: Text.Auth.Create.login, action: #selector(goToLoginScreen), target: self)
         button.backgroundColor = .clear
         button.setTitleColor(.white, for: .normal)
@@ -51,6 +51,7 @@ class CreateViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = ColorConstants.backColor
         setupView()
+        setupTapGesture()
     }
     
     func setupView() {
@@ -108,12 +109,34 @@ class CreateViewController: UIViewController {
         ])
     }
     
-    @objc func goToLoginScreen() {
-
+    func setupTapGesture() {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            view.addGestureRecognizer(tapGesture)
+    }
+        
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
+    @objc func goToLoginScreen() {
+        let vc = LoginViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+
     @objc func alertCreateAccount() {
+        let alert = UIAlertController(title: Text.Auth.Create.alertTitle, message: Text.Auth.Create.message, preferredStyle: .alert)
         
+        let confirmAction = UIAlertAction(title: Text.Auth.Create.close, style: .default) { (_) in
+            self.goToLoginScreen()
+ 
+            //Aqui precisei do GPT MESMO!
+            if let createViewControllerIndex = self.navigationController?.viewControllers.firstIndex(where: { $0 is CreateViewController }) {
+                self.navigationController?.viewControllers.remove(at: createViewControllerIndex)
+            }
+        }
+        alert.addAction(confirmAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

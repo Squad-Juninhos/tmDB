@@ -88,5 +88,4 @@ enum LayoutConstants {
     static let labelSize: CGFloat = 23
     static let textFieldSize: CGFloat = 18
     static let textFieldBottomSize: CGFloat = 1.5
-    
 }
